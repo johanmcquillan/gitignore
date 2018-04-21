@@ -1,3 +1,5 @@
+### Yii
+
 assets/*
 !assets/.gitignore
 protected/runtime/*
