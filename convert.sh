@@ -28,6 +28,10 @@ do
             printf "$HEADER\n\n" > tmp
             cat $FILE >> tmp
             
+            # Maintain file permissions
+            MODE=$(stat -f %0Lp $FILE)
+            chmod $MODE tmp
+
             mv tmp $FILE
             echo "Converted $FILE"
         fi
